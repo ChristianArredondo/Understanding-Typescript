@@ -1,1 +1,1 @@
-console.log("Tt works!");
+console.log("It works!");
