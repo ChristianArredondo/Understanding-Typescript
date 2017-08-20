@@ -1,8 +1,5 @@
 "use strict";
 // Exercise 1
-// var double = function(value) {
-//   return value * 2;
-// };
 var double = function (value) { return value * 2; };
 console.log(double(10));
 // Exercise 2
@@ -10,10 +7,6 @@ var greet2 = function (name) {
     if (name === void 0) { name = 'Max'; }
     return console.log("Hello, " + name);
 };
-// var greet = function (name) {
-//   if (name === undefined) { name = "Max"; }
-//   console.log("Hello, " + name);
-// };
 greet2();
 greet2("Anna");
 // Exercise 3
