@@ -118,5 +118,5 @@ var OnlyOne = (function () {
     return OnlyOne;
 }());
 var privC = OnlyOne.getInstance();
-console.log(privC);
-// readonly 
+console.log(privC.name);
+privC.name = 'Some new name';
