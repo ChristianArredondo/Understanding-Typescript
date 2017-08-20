@@ -11,9 +11,9 @@ let hasHobbies = false;
 // hasHobbies = 1;
 
 // assign type
-let myRealAge;
-myRealAge = 27;
-myRealAge = '27';
+// let myRealAge;
+// myRealAge = 27;
+// myRealAge = '27';
 
 // array
 let hobbies: any[] = ['Cooking', 'Sports'];
@@ -65,7 +65,44 @@ let userData: {name: string, age: number} = {
   age: 26
 };
 
-// userData = {
-//   a: 'hello',
-//   b: 22
-// };
+// complex object
+let complex: {data: number[], output: (all: boolean) => number[]} = {
+  data: [1, 2, 3],
+  output: function (all: boolean): number[] {
+    return this.data
+  }
+}
+
+// type alias
+
+type Complex = {data: number[], output: (all: boolean) => number[]};
+
+// complex = {}
+let complex2: Complex = {
+  data: [1, 2, 3],
+  output: function (all: boolean): number[] {
+    return this.data
+  }
+};
+
+// union types
+let myRealAge: number | string = 27;
+myRealAge = "27";
+// myRealAge = true;
+
+// check types
+let finalValue = 20;
+if (typeof finalValue == 'number') {
+  console.log('Final value is a number')
+}
+
+// never
+function neverReturns (): never {
+  throw new Error('An error!');
+}
+
+// Nullable types
+let canBeNull: number | null = 12;
+canBeNull = null;
+let canAlsoBeNull;
+canAlsoBeNull = null;
