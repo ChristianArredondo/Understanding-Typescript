@@ -58,3 +58,52 @@ console.log(plant.species = 'Flowers');
 plant.species = 'lo';
 console.log(plant.species);
 
+// static properties and methods
+class Helpers {
+  static PI: number = 3.14159265358979;
+  static calcCircumference (d: number) {
+    return d * this.PI;
+  }
+}
+console.log(2 * Helpers.PI);
+
+// abstract classes
+abstract class Project {
+  projectName: string = 'Default';
+  budget: number;
+
+  abstract changeName (name: string): void;
+
+  calcBudget () {
+    return this.budget * 2;
+  }
+}
+
+class ITProject extends Project {
+  changeName (name: string): void {
+    this.projectName = name;
+  }
+}
+
+let newProject = new ITProject();
+console.log(newProject);
+newProject.changeName('Super IT Project');
+console.log(newProject);
+
+// private constructors
+class OnlyOne {
+  private static instance: OnlyOne;
+
+  private constructor (public name: string) {}
+
+  static getInstance () {
+    if (!OnlyOne.instance) {
+      OnlyOne.instance = new OnlyOne('The Only One');
+    }
+    return OnlyOne.instance;
+  }
+}
+
+let privC = OnlyOne.getInstance();
+console.log(privC.name);
+privC.name = 'Some new name';

@@ -69,3 +69,54 @@ console.log(plant.species);
 console.log(plant.species = 'Flowers');
 plant.species = 'lo';
 console.log(plant.species);
+// static properties and methods
+var Helpers = (function () {
+    function Helpers() {
+    }
+    Helpers.calcCircumference = function (d) {
+        return d * this.PI;
+    };
+    Helpers.PI = 3.14159265358979;
+    return Helpers;
+}());
+console.log(2 * Helpers.PI);
+// abstract classes
+var Project = (function () {
+    function Project() {
+        this.projectName = 'Default';
+    }
+    Project.prototype.calcBudget = function () {
+        return this.budget * 2;
+    };
+    return Project;
+}());
+var ITProject = (function (_super) {
+    __extends(ITProject, _super);
+    function ITProject() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    ITProject.prototype.changeName = function (name) {
+        this.projectName = name;
+    };
+    return ITProject;
+}(Project));
+var newProject = new ITProject();
+console.log(newProject);
+newProject.changeName('Super IT Project');
+console.log(newProject);
+// private constructors
+var OnlyOne = (function () {
+    function OnlyOne(name) {
+        this.name = name;
+    }
+    OnlyOne.getInstance = function () {
+        if (!OnlyOne.instance) {
+            OnlyOne.instance = new OnlyOne('The Only One');
+        }
+        return OnlyOne.instance;
+    };
+    return OnlyOne;
+}());
+var privC = OnlyOne.getInstance();
+console.log(privC);
+// readonly 
