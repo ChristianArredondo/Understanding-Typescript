@@ -55,3 +55,7 @@ console.log(hobby1, hobby2);
 var userData = { username: 'Christian', age: 26 };
 var username = userData.username, age = userData.age;
 console.log(username, age);
+// template literals
+var user = 'Christian';
+var greeting = "This is a heading!\nI'm " + user + ".\nThis is cool!";
+console.log(greeting);

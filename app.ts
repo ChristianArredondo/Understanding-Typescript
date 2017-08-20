@@ -61,3 +61,11 @@ console.log(hobby1, hobby2);
 const userData = {username: 'Christian', age: 26};
 const {username, age} = userData;
 console.log(username, age);
+
+// template literals
+const user = 'Christian';
+const greeting = `This is a heading!
+I'm ${user}.
+This is cool!`;
+console.log(greeting);
+
