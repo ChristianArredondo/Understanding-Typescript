@@ -8,7 +8,7 @@ var myAge = 27;
 // boolean
 var hasHobbies = false;
 // hasHobbies = 1;
-// assign typew
+// assign type
 var myRealAge;
 myRealAge = 27;
 myRealAge = '27';
@@ -28,3 +28,32 @@ var Color;
 var myColor = Color.Blue;
 console.log('color');
 console.log(myColor);
+// functions
+function returnMyName() {
+    return myName;
+}
+console.log(returnMyName());
+// void
+function sayHello() {
+    console.log('Hello');
+}
+// argument types
+function multiply(value1, value2) {
+    return value1 * value2;
+}
+console.log(multiply(1, 2));
+// function types
+var myMultiply;
+// myMultiply = sayHello;
+// myMultiply();
+myMultiply = multiply;
+console.log(myMultiply(2, 3));
+// objects
+var userData = {
+    name: 'Christian',
+    age: 26
+};
+userData = {
+    a: 'hello',
+    b: 22
+};
