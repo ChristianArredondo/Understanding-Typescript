@@ -85,4 +85,3 @@ var canBeNull = 12;
 canBeNull = null;
 var canAlsoBeNull;
 canAlsoBeNull = null;
-var canBeAny = null;
