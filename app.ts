@@ -28,5 +28,26 @@ console.log(multiplyNumbers(10,2));
 const greet = () => console.log('Hello');
 greet();
 
-const greetFriend = friend => console.log(friend);
+const greetFriend = (friend: string) => console.log(friend);
 greetFriend('James');
+
+// default parameters
+console.log('DEFAULT PARAMETERS');
+const countdown = (start: number = 10): void => {
+  while (start > 0) {
+    start --;
+  }
+  console.log('Countdown finished!!!');
+}
+countdown(20);
+
+// rest & spread
+console.log('REST & SPREAD');
+const numbers = [1, 10, 50, -10];
+console.log(Math.max(...numbers));
+
+function makeArray (name: string, ...args: number[]) {
+  return args;
+}
+
+console.log(makeArray('Christian', 1, 2, 3));
