@@ -30,3 +30,17 @@ var myPerson = new Humanoid();
 myPerson.firstName = 'Christian Ivan';
 greeter(myPerson);
 myPerson.greet('Anything');
+var myDoubleFunction;
+myDoubleFunction = function (v1, v2) {
+    return (v1 + v2) * 2;
+};
+console.log(myDoubleFunction(8, 10));
+var elderPerson = {
+    age: 27,
+    firstName: 'Chris',
+    greet: function (lastName) {
+        console.log(this.firstName + ' ' + lastName);
+    }
+};
+console.log(elderPerson);
+elderPerson.greet('Last Name');

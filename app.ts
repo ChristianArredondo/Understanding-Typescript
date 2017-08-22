@@ -1,3 +1,4 @@
+// interfaces and classes
 interface NamedHuman {
   firstName: string;
   age?: number;
@@ -41,3 +42,27 @@ greeter(myPerson);
 myPerson.greet('Anything');
 
 // Function Types
+interface DoubleValueFunc {
+  (number1: number, number2: number): number;
+}
+
+let myDoubleFunction: DoubleValueFunc;
+myDoubleFunction = function(v1: number, v2: number) {
+  return (v1 + v2) * 2;
+}
+console.log(myDoubleFunction(8,10));
+
+// interface inheritance
+interface AgedPerson extends NamedHuman {
+  age: number;
+}
+
+const elderPerson : AgedPerson = {
+  age: 27,
+  firstName: 'Chris',
+  greet(lastName: string) {
+    console.log(this.firstName + ' ' + lastName);
+  }
+}
+console.log(elderPerson);
+elderPerson.greet('Last Name');
