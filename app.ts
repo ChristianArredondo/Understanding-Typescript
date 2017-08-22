@@ -13,7 +13,7 @@ function changeName (person: NamedHuman) {
   person.firstName = 'Someone Else';
 }
 
-const human = {
+const human: NamedHuman = {
   firstName: 'Christian',
   age: 27,
   hobbies: ['Cooking', 'Sports', 'Swangin'],
@@ -39,3 +39,5 @@ const myPerson = new Humanoid();
 myPerson.firstName = 'Christian Ivan';
 greeter(myPerson);
 myPerson.greet('Anything');
+
+// Function Types
